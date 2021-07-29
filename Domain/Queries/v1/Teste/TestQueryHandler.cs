@@ -9,7 +9,7 @@ namespace Domain.Queries.v1.Teste
     {
         public Task<string> Handle(RequestTest request, CancellationToken cancellationToken)
         {
-            return Task.FromResult<string>("Olá mundo!!");
+            return Task.FromResult<string>("Olá mundo!! Eu fui criado pelo Gabriel!");
         }
     }
 }
