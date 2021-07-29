@@ -17,9 +17,9 @@ namespace API.Controllers.v1
         }
 
         [HttpGet]
-        public async Task<IActionResult> Create()
+        public async Task<IActionResult> Create([FromQuery] string name, string race, string weapon)
         {
-            var dto = new RequestTest();
+            var dto = new RequestTest(name, race, weapon);
             var result = await _mediator.Send(dto);
             return Ok(result);
         }
